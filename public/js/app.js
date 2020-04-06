@@ -34,8 +34,8 @@ weatherForm.addEventListener('submit', (event) => {
                     // }else if (data.features.length === 0){
                     //     console.log('Unable to find location. Try another sreach' );
                 } else {
-                    messageOne.textContent = `this is the location ${data.location}`;
-                    messageTwo.textContent = `this is the forcast: ${JSON.stringify(data.forcastData)} `;
+                    messageOne.textContent = `${data.location}`;
+                    messageTwo.textContent = `${JSON.stringify(data.forcastData)}`;
                     // console.log(data.location);
                     // console.log(data.forcastData);
                 }

@@ -10,14 +10,14 @@ const forecast = (latitude, longitude, cb) => {
             cb('Unable to find location. Try another sreach' ,undefined);
         }
         else{
-            cb(undefined ,{
-                         longittude : body.latitude,
-                         latitude : body.longitude,
-                         location: body.timezone
-            });
+            cb(undefined ,
+                body.daily.data[0].summary + ' it is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + ' % chance of rain'
+            );
 
         }
     });
 }
 
 module.exports = forecast;
+
+
